@@ -222,7 +222,10 @@ def main():
 
 
 if __name__ == '__main__':
-    osdriver.initialize()
+    try:
+        osdriver.initialize()
+    except:
+        print("Program must be run as root")
     try:
         main()
     finally:
