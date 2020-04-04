@@ -110,7 +110,8 @@ def distro(iso_cfg_ext_dir, iso_link, expose_exception=False):
         ('slitaz',     contains('minimal Slackware|Slackware-HOWTO')),
         #('suse',      contains('suse')),
         ('opensuse-install', contains('class opensuse')),
-        ('ubuntu',     contains('boot=casper|ubuntu.seed')),
+        ('ubuntu',     contains('boot=casper|ubuntu.seed')),  # add |ubuntu.seed to get it to even install on +18.04LTS
+                                                          # Both options are found in the iso's boot/grub/grub.cfg file
         ('wifislax',   contains('wifislax')),
         ('slax',       contains('slax')),
         ('sms',        [contains('sms.jpg|vector |autoexec'),
