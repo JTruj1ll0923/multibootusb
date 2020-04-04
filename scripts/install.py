@@ -237,7 +237,7 @@ def install_patch():
         config.usb_mount, "multibootusb", iso_basename(config.image_path))
     config.syslinux_version = isolinux_version(isolinux_path)
 
-    if config.distro in ['slitaz', 'ubunu']:
+    if config.distro in ['slitaz', 'ubuntu']:
         replace_syslinux_modules(config.syslinux_version, distro_install_dir)
     elif config.distro == 'gentoo':
         replace_syslinux_modules(config.syslinux_version, distro_install_dir)
